@@ -3,29 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login page</title>
-	<style>
-		div
-		{
-			display: flex;
-		}
-	
-		.input
-		{
-			width: 70px;
-		}
-		
-		.button
-		{
-			padding-right: 2px;
-		}
-		
-	</style>
+	<link type="text/css" rel="stylesheet" href="loginStyle.css">
 </head>
 <body>
 	<form>
-	<div><span class="input">ID: </span><span></span><input type="text" name="id" /></div>
-	<div><span class="input">Password: </span><input type="password" name="pw" /></div>
-	<div><span class="button"><input type="button" name="sign_in" value="sign in" /></span><span><input type="button" name="sign_up" value="sign up" /></span></div>	
+		<div><span class="title">ID: </span><input class="input" type="text" name="id" /></div>
+		<div><span class="title">Password: </span><input class="input" type="password" name="pw" /></div>
+		<div>
+			<span style="padding-right: 20px"><input class="button" type="button" name="sign_in" value="sign in" /></span>
+			<span><input class="button" type="button" name="sign_up" value="sign up" /></span>
+		</div>	
 	</form>
 </body>
 </html>
