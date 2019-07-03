@@ -10,9 +10,16 @@
 		<div><span class="title">ID: </span><input class="input" type="text" name="id" /></div>
 		<div><span class="title">Password: </span><input class="input" type="password" name="pw" /></div>
 		<div>
-			<span style="padding-right: 20px"><input class="button" type="button" name="sign_in" value="sign in" /></span>
-			<span><input class="button" type="button" name="sign_up" value="sign up" /></span>
-		</div>	
+			<span style="padding-right: 20px"><input class="button" type="submit"  name="sign_in" value="sign in" formaction="Calendar.php"/></span>
+			<span><input class="button" type="button" name="sign_up" value="sign up" onclick="move()" /></span>
+		</div>
+		
+		<script>
+		function move()
+		{
+			location.href="/SignUp.html";
+		}
+		</script>
 	</form>
 </body>
 </html>
