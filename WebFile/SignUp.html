@@ -13,9 +13,16 @@
 		<div><span class="title">ID: </span><input class="input" type="text" name="id" /></div>
 		<div><span class="title">Password: </span><input class="input" type="text" name="id" /></div>
 		<div>
-			<span style="padding-right: 20px"><input class="button" type="button" name="submit" value="submit"/></span>
-			<span><input class="button" type="button" name="cancle" value="cancle"/></span>
+			<span style="padding-right: 20px"><input class="button" type="submit" name="submit" value="submit"/></span>
+			<span><input class="button" type="button" name="cancle" value="cancle" onclick="move()" /></span>
 		</div>
+
+		<script>
+			function move()
+			{
+				location.href="/Login.html";
+			}
+		</script>
 	</form>
 </body>
 </html>
