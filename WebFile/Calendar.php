@@ -2,16 +2,15 @@
     echo "test";
     $thisYear = date('y');
     $thisMonth = date('m');
-    $thisDay = date('d');   
+    $thisDay = date('d');
 
     $curYear = $thisYear;
     $curMonth = $thisMonth;
     $curDay = $thisDay;
 
     # 해당 달의 최대 일을 구하는 변수
-    $maxDay = date('t', mktime(0, 0, $curMonth, $curDay, $curYear));
-
-    $dayName = array('일', '월', '화', '수', '목', '금', '토');
+    $maxDay = date('t', mktime(0, 0, 0, $curMonth, $curDay, $curYear));
+    $dayNameList = array('일', '월', '화', '수', '목', '금', '토');
 
 ?>
 
@@ -47,25 +46,59 @@
         <table>
             <thead>
                 <tr>
-                    <th><?php echo $dayName[0]; ?></th>
-                    <th><?php echo $dayName[1]; ?></th>
-                    <th><?php echo $dayName[2]; ?></th>
-                    <th><?php echo $dayName[3]; ?></th>
-                    <th><?php echo $dayName[4]; ?></th>
-                    <th><?php echo $dayName[5]; ?></th>
-                    <th><?php echo $dayName[6]; ?></th>
+                    <th><?php echo $dayNameList[0]; ?></th>
+                    <th><?php echo $dayNameList[1]; ?></th>
+                    <th><?php echo $dayNameList[2]; ?></th>
+                    <th><?php echo $dayNameList[3]; ?></th>
+                    <th><?php echo $dayNameList[4]; ?></th>
+                    <th><?php echo $dayNameList[5]; ?></th>
+                    <th><?php echo $dayNameList[6]; ?></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+            <?php
+                $day = 1;
+                $day_name = date('w', mktime(0, 0, 0, $curMonth, 1, $curYear)); #'w'는 시, 분, 초, 월, 일, 년 순서 모두 채워주지 않으면 이상한 데이터가 출력된다.
+
+                for($i = 0; $i < 6; $i++)
+                {
+                    ?>
+                    <tr>
+                    <?php
+                    for($j = 0; $j < 7; $j++)
+                    {
+                        ?>
+                        <td>
+                        <?php
+                        if($day > $maxDay)
+                        {
+                            break;
+                        }
+
+                        if($day == 1 && $j < $day_name)
+                        {
+                            ?></td> <!-- table column 생성 -->
+                            <?php
+                            continue;
+                        }
+
+                        echo $day;
+                        ?></td>
+                        <?php
+                        $day++;
+                    }
+                }
+                    ?>
+                    </td>
+                    </tr>
                     <!--1주차-->
                     <th><?php #일 ?></th>
-                    <th><?php #월 ?></th>
+                    <th><?php #월 ?></th> 
                     <th><?php #화 ?></th>
                     <th><?php #수 ?></th>
                     <th><?php #목 ?></th>
                     <th><?php #금 ?></th>
-                    <th><?php #토 ?></th>
+                    <th><?php #토 ?></th>   
                 </tr>
                 <tr>
                     <!--2주차-->
@@ -109,7 +142,6 @@
                 </tr>
             </tbody>
         </table>
-
     </div>
 </body>
 </html>
