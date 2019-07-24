@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sign in</title>
+    <!--<link type="text/css" rel="stylesheet" href="loginStyle.css">-->
+    <style type="text/css">
+        #header{
+            background-color: red;
+            width: 100%;
+            height: 25px;
+        }
+        #body{
+            background-color: green;
+            display: flexbox;
+            flex-direction: row;
+        }
+        #tail{
+            background-color: yellow;
+        }
+        .service_list
+        {
+            background-color: aqua;
+            flex: 1;
+            height: 70%;
+            width: 100px;
+        }
+        .content
+        {
+            background-color: purple;
+            flex: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="body">
+        <span class="service_list">
+            <!--
+            <div class="dropdown_folder">-->
+                <button class="dropdown_folder" onclick>학사행정</button>
+                <!--
+            </div>
+            <div class="dropdown_folder">
+                <button class="empty" onclick>학습및취업지원</button>
+            </div>
+            <div class="dropdown_folder">
+                <button class="empty" onclick>인턴십</button>
+            </div>
+            <div class="dropdown_folder">
+                <button class="empty" onclick>의약바이오/LINC</button>
+            </div>
+            <div class="dropdown_folder">
+                <button class="empty" onclick>일반행정</button>
+            </div>
+            <div class="dropdown_folder">
+                <button class="empty" onclick>연구실적 경력</button>
+            </div>
+            <div class="dropdown_folder">
+                <button class="empty" onclick>통합정보시스템 기능개선 요청</button>
+            </div>
+        -->
+        </span>
+        <span class="content">body</span>
+    </div>
+    <div id="tail">tail</div>
+    
+    </div>
+	<form>
+		<div><span class="title">ID: </span><input class="input" type="text" name="id" /></div>
+		<div><span class="title">Password: </span><input class="input" type="text" name="id" /></div>
+		<div>
+			<span style="padding-right: 20px"><input class="button" type="submit" name="submit" value="submit"/></span>
+			<span><input class="button" type="button" name="cancle" value="cancle" onclick="move()" /></span>
+		</div>
+
+		<script>
+			function move()
+			{
+				location.href="/Login.html";
+			}
+		</script>
+	</form>
+</body>
+</html>
