@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Sign in</title>
+	<title>통합정보시스템</title>
     <!--<link type="text/css" rel="stylesheet" href="loginStyle.css">-->
     <style type="text/css">
         #header{
@@ -21,66 +21,72 @@
         .service_list
         {
             background-color: aqua;
-            flex: 1;
+            float: left;
             height: 70%;
-            width: 100px;
+            width: 200px;
         }
         .content
         {
             background-color: purple;
-            flex: 4;
+            float: left;
+            height: 300px;
+            width: 100px;
+        }
+        footer
+        {
+            clear: both;
+        }
+
+        #collegeAdminstration
+        {
+            display:none;
         }
 
     </style>
 </head>
 <body>
-    <div id="header">header</div>
-    <div id="body">
-        <span class="service_list">
-            <!--
-            <div class="dropdown_folder">-->
-                <button class="dropdown_folder" onclick>학사행정</button>
-                <!--
+    <header id="header">header</header>
+    <nav class="service_list"> 
+        <div class="dropdown_folder">
+            <button class="dropdown_folder" onclick="open_CollegeAdminstration()">학사행정</button>
+                <div class="dropdown_folder" id="collegeAdminstration">신상정보
+                    <div id="privateInfo">신상정보</div>
+                </div>
+                <div class="dropdown_folder" id="">휴복학 및 미래설계상담</div>
+                <div class="dropdown_folder">일반교육과정</div>
+                <div class="dropdown_folder">수강정보</div>
+                <div class="dropdown_folder">성적정보
+                    <!--
+                        <button>전체성적조회</button>
+                    -->
+                </div>
+                <div class="dropdown_folder">장학/등록</div>
             </div>
-            <div class="dropdown_folder">
-                <button class="empty" onclick>학습및취업지원</button>
-            </div>
-            <div class="dropdown_folder">
-                <button class="empty" onclick>인턴십</button>
-            </div>
-            <div class="dropdown_folder">
-                <button class="empty" onclick>의약바이오/LINC</button>
-            </div>
-            <div class="dropdown_folder">
-                <button class="empty" onclick>일반행정</button>
-            </div>
-            <div class="dropdown_folder">
-                <button class="empty" onclick>연구실적 경력</button>
-            </div>
-            <div class="dropdown_folder">
-                <button class="empty" onclick>통합정보시스템 기능개선 요청</button>
-            </div>
-        -->
-        </span>
-        <span class="content">body</span>
-    </div>
-    <div id="tail">tail</div>
-    
-    </div>
-	<form>
-		<div><span class="title">ID: </span><input class="input" type="text" name="id" /></div>
-		<div><span class="title">Password: </span><input class="input" type="text" name="id" /></div>
-		<div>
-			<span style="padding-right: 20px"><input class="button" type="submit" name="submit" value="submit"/></span>
-			<span><input class="button" type="button" name="cancle" value="cancle" onclick="move()" /></span>
-		</div>
+        </div>
+        
+        <div class="dropdown_folder" id="not_implements">   <button class="empty" onclick>학습및취업지원</button>   </div>
+        <div class="dropdown_folder" id="not_implements">   <button class="empty" onclick>인턴십</button> </div>
+        <div class="dropdown_folder" id="not_implements">   <button class="empty" onclick>의약바이오/LINC</button>  </div>
+        <div class="dropdown_folder" id="not_implements">   <button class="empty" onclick>일반행정</button> </div>
+        <div class="dropdown_folder" id="not_implements">   <button class="empty" onclick>연구실적 경력</button>    </div>
+        <div class="dropdown_folder" id="not_implements">   <button class="empty" onclick>통합정보시스템 기능개선 요청</button> </div>
+    </nav>
+    <section class="content">body</section>
+    <footer id="tail">tail</footer>
 
-		<script>
-			function move()
-			{
-				location.href="/Login.html";
-			}
-		</script>
-	</form>
+    <script type="text/javascript">
+        function open_CollegeAdminstration()
+        {
+            var con = document.getElementById("collegeAdminstration");
+            if(con.style.display=='none')
+            {
+                con.style.display = 'block';
+            }
+            else
+            {
+                con.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
