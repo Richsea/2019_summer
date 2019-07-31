@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>신상정보</title>
+    <style type="text/css">
+        section
+        {
+            border: 1px solid black;
+            margin: 1px;
+        }
+        input
+        {
+            display: block;
+            margin: 0px auto;
+        }
+        div { background-color: lightgray; }
+        p   { margin: 5px; }
+
+        .header { margin: 0px; }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <span>조직분류</span>
+            <span>학번/성명</span>
+        </div>
+    </section>
+    <section>
+        <h4 class="header">[학생기초정보]</h4>
+        <div>
+            <span>
+                <p id="student_id">학번</p>
+                <p id="student_name">성명</p>
+                <p id="school_name">소속</p>
+                <p id="admission_case">입학전형</p>
+                <p id="student_grade">수강신청학년(학기)</p>
+            </span>
+        </div>
+    </section>
+    <section>
+        <form>
+            <h4 class="header">[연락처 및 영문성명]</h4>
+            <div>
+                <p>휴대전화번호</p>
+                <p>이메일</p>
+                <p>성(영문)</p>
+                <p>명(영문)</p>
+            </div>
+            <input class="button" type="submit" value="저장"/>
+        </form>
+    </section>
+
+    <p>DB에서 데이터를 가져오기</p>
+
+</body>
+</html>

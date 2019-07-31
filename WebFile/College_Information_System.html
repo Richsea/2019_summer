@@ -38,7 +38,7 @@
         }
 
         .collegeAdminstration_subDir, .privateInfo_subDir, .future_consulting_subDir, .curriculum_subDir,
-        .course_info_subDir, .grade_info_subDir, .scholarship_subDir
+        .course_info_subDir, .grade_info_subDir, .scholarship_subDir, .class_registrationList_subDir
         {
             display: none;
         }
@@ -50,25 +50,30 @@
     <nav class="service_list"> 
         <div class="outer_directory">
             <button class="outer_directory" onclick="openDirectory('collegeAdminstration_subDir')">학사행정</button>
-                <div class="collegeAdminstration_subDir" id="privateInfo" onclick="openDirectory('privateInfo_subDir')">신상정보   
-                    <div class="privateInfo_subDir" id="privateInfo_setting">신상정보</div>
+                <div class="collegeAdminstration_subDir" id="privateInfo"><a onclick="openDirectory('privateInfo_subDir')">신상정보</a>
+                    <div class="privateInfo_subDir" id="privateInfo_setting" onclick="showContents('privateInfo_setting.html')">신상정보</div>
                 </div>
-                <div class="collegeAdminstration_subDir" id="future_consulting" onclick="openDirectory('future_consulting_subDir')">휴복학 및 미래설계상담
+                <div class="collegeAdminstration_subDir" id="future_consulting"><a onclick="openDirectory('future_consulting_subDir')">휴복학 및 미래설계상담</a>
                     <div class="future_consulting_subDir" id="ready">준비중입니다.</div>
                 </div>
-                <div class="collegeAdminstration_subDir" id="curriculum" onclick="openDirectory('curriculum_subDir')">일반교육과정
+                <div class="collegeAdminstration_subDir" id="curriculum"><a onclick="openDirectory('curriculum_subDir')">일반교육과정</a>
                     <div class="curriculum_subDir" id="show_curriculum">교육과정조회</div>
                     <div class="curriculum_subDir" id="subject_plan">강의계획조회</div>
                 </div>
-                <div class="collegeAdminstration_subDir" id="course_info" onclick="openDirectory('course_info_subDir')">수강정보</div>
+                <div class="collegeAdminstration_subDir" id="course_info"><a onclick="openDirectory('course_info_subDir')">수강정보</a>
                     <div class="course_info_subDir" id="timeTable">수강신청내역/시간표</div>
-                <div class="collegeAdminstration_subDir" id="grade_info" onclick="openDirectory('grade_info_subDir')">성적정보
+                </div>
+                <div class="collegeAdminstration_subDir" id="grade_info"><a onclick="openDirectory('grade_info_subDir')">성적정보</a>
                     <div class="grade_info_subDir" id="current_grade">당학기성적조회</div>
                     <div class="grade_info_subDir" id="whole_grade">전체성적조회</div>
                     <div class="grade_info_subDir" id="graduate_needs">졸업자가진단</div>
                 </div>
-                <div class="collegeAdminstration_subDir" id="scholarship" onclick="openDirectory('scholarship_subDir')">장학/등록
+                <div class="collegeAdminstration_subDir" id="scholarship"><a onclick="openDirectory('scholarship_subDir')">장학/등록</a>
                     <div class="scholarship_subDir" id="tution">등록금납부내역</div>
+                </div>
+                <div>
+                <div class="collegeAdminstration_subDir" id="class_registrationList"><a onclick="openDirectory('class_registrationList_subDir')">수강신청</a>
+                    <div class="class_registrationList_subDir" id="class_registration">수강신청</div>
                 </div>
         </div>
         
@@ -79,7 +84,9 @@
         <div class="outer_directory" id="not_implements">   <button class="empty" onclick>연구실적 경력</button>    </div>
         <div class="outer_directory" id="not_implements">   <button class="empty" onclick>통합정보시스템 기능개선 요청</button> </div>
     </nav>
-    <section class="content">body</section>
+    <section class="content">body
+        <iframe id="content_frame" src=""></iframe>
+    </section>
     <footer id="tail">tail</footer>
 
     <script type="text/javascript">
@@ -98,6 +105,11 @@
                     classList[i].style["display"] = 'none';
                 }
             }
+        }
+
+        function showContents(htmlName)
+        {
+            document.getElementById("content_frame").src = htmlName;
         }
     </script>
 </body>
