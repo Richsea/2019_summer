@@ -15,8 +15,18 @@
             margin: 0px auto;
         }
         div { background-color: lightgray; }
-        p   { margin: 5px; }
 
+        textarea
+        {
+            max-height: 15px;
+        }
+
+        .inlineBlock#phoneNum
+        {
+            max-width: 40px;
+        }
+
+        .inlineBlock { display: inline-block; }
         .header { margin: 0px; }
 
     </style>
@@ -32,11 +42,22 @@
         <h4 class="header">[학생기초정보]</h4>
         <div>
             <span>
-                <p id="student_id">학번</p>
-                <p id="student_name">성명</p>
-                <p id="school_name">소속</p>
-                <p id="admission_case">입학전형</p>
-                <p id="student_grade">수강신청학년(학기)</p>
+                학번
+                <textarea id="student_number" readonly></textarea>
+                성명
+                <textarea id="student_name" readonly></textarea>
+                생년월일
+                <textarea id="student_birthday" readonly></textarea>
+                <br>
+
+                소속
+                <textarea id="student_major" readonly></textarea>
+                <br>
+
+                입학전형
+                <textarea id="admission_case"></textarea>
+                수강신청학년(학기)
+                <textarea id="student_grade"></textarea>
             </span>
         </div>
     </section>
@@ -44,12 +65,27 @@
         <form>
             <h4 class="header">[연락처 및 영문성명]</h4>
             <div>
-                <p>휴대전화번호</p>
-                <p>이메일</p>
-                <p>성(영문)</p>
-                <p>명(영문)</p>
+                휴대전화번호 
+                <select>
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="018">018</option>
+                    <option value="019">019</option>
+                </select>
+                <input type="text" class="inlineBlock" id="phoneNum" value="5177">
+                <input type="text" class="inlineBlock" id="phoneNum" value="1733">
+
+                이메일 <input type="text" class="inlineBlock" value="qngo123@hanmail.net">
+
+                <br>
+                성(영문)
+                <input type="text" class="inlineBlock" value="Yeh">
+                명(영문)
+                <input type="text" class="inlineBlock" value="Buhai">
+                <input class="button" type="submit" value="저장"/>
             </div>
-            <input class="button" type="submit" value="저장"/>
         </form>
     </section>
 

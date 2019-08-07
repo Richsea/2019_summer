@@ -51,29 +51,52 @@
         <div class="outer_directory">
             <button class="outer_directory" onclick="openDirectory('collegeAdminstration_subDir')">학사행정</button>
                 <div class="collegeAdminstration_subDir" id="privateInfo"><a onclick="openDirectory('privateInfo_subDir')">신상정보</a>
-                    <div class="privateInfo_subDir" id="privateInfo_setting" onclick="showContents('privateInfo_setting.html')">신상정보</div>
+                    <div class="privateInfo_subDir" id="privateInfo_setting">
+                        <a onclick="showContents('privateInfo_setting.html')">신상정보</a>
+                    </div>
                 </div>
+
                 <div class="collegeAdminstration_subDir" id="future_consulting"><a onclick="openDirectory('future_consulting_subDir')">휴복학 및 미래설계상담</a>
                     <div class="future_consulting_subDir" id="ready">준비중입니다.</div>
                 </div>
+
                 <div class="collegeAdminstration_subDir" id="curriculum"><a onclick="openDirectory('curriculum_subDir')">일반교육과정</a>
-                    <div class="curriculum_subDir" id="show_curriculum">교육과정조회</div>
-                    <div class="curriculum_subDir" id="subject_plan">강의계획조회</div>
+                    <div class="curriculum_subDir" id="show_curriculum">
+                        <a onclick="showContents('show_curriculum.html')">교육과정조회</a>
+                    </div>
+                    <div class="curriculum_subDir" id="subject_plan">
+                        <a onclick="showContents('not_ready.html')">강의계획조회</a>
+                    </div>
                 </div>
+
                 <div class="collegeAdminstration_subDir" id="course_info"><a onclick="openDirectory('course_info_subDir')">수강정보</a>
-                    <div class="course_info_subDir" id="timeTable">수강신청내역/시간표</div>
+                    <div class="course_info_subDir" id="timeTable">
+                        <a onclick="showContents('timeTable.html')">수강신청내역/시간표</a>
+                    </div>
                 </div>
+
                 <div class="collegeAdminstration_subDir" id="grade_info"><a onclick="openDirectory('grade_info_subDir')">성적정보</a>
-                    <div class="grade_info_subDir" id="current_grade">당학기성적조회</div>
-                    <div class="grade_info_subDir" id="whole_grade">전체성적조회</div>
-                    <div class="grade_info_subDir" id="graduate_needs">졸업자가진단</div>
+                    <div class="grade_info_subDir" id="current_semester_grade">
+                        <a onclick="showContents('current_semester_grade.html')">당학기성적조회</a>
+                    </div>
+                    <div class="grade_info_subDir" id="total_grade">
+                        <a onclick="showContents('total_grade.html')">전체성적조회</a>
+                    </div>
+                    <div class="grade_info_subDir" id="graduate_needs">
+                        <a onclick="showContents('not_ready.html')">졸업자가진단</a>
+                    </div>
                 </div>
+
                 <div class="collegeAdminstration_subDir" id="scholarship"><a onclick="openDirectory('scholarship_subDir')">장학/등록</a>
-                    <div class="scholarship_subDir" id="tution">등록금납부내역</div>
+                    <div class="scholarship_subDir" id="tution">
+                        <a onclick="showContents('not_ready.html')">등록금납부내역</a>
+                    </div>
                 </div>
-                <div>
-                <div class="collegeAdminstration_subDir" id="class_registrationList"><a onclick="openDirectory('class_registrationList_subDir')">수강신청</a>
-                    <div class="class_registrationList_subDir" id="class_registration">수강신청</div>
+
+                <div class="collegeAdminstration_subDir" id="class_registrationList"><a onclick="openDirectory('class_registrationList_subDir')">다음학기 수강신청</a>
+                    <div class="class_registrationList_subDir" id="class_registration">
+                        <a onclick="showContents('class_registration.html')">수강신청 시간표</a>
+                    </div>
                 </div>
         </div>
         

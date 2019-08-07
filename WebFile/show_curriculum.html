@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>신상정보</title>
+    <style type="text/css">
+        section
+        {
+            border: 1px solid black;
+            margin: 1px;
+        }
+        div { background-color: lightgray; }
+
+        #align_middle 
+        {
+            display: block;
+            margin: 0px auto;
+        }
+        .header { margin: 0px; }
+        .line_1 { margin: auto; }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+        <form>
+            <span class="line_1">
+                년도
+                <input type="number" id="currentYear">
+                이수구분
+                <select name="subject_type">
+                    <option value="every_course">- 전체 -</option>
+                    <option value="elective_course">교양</option>
+                    <option value="basic_course">기초</option>
+                    <option value="major_select">전선</option>
+                    <option value="major_necessary">전필</option>
+                </select>
+                학과전공
+                <select name="major_name">
+                    <option value="every_major">- 전체 -</option>
+                    <option value="major_computer">공과대학 컴퓨터공학과</option>
+                    <option value="major_electricity">공과대학 전기공학과</option>
+                </select>
+                <input type="submit" value="조회">
+            </span>
+            <br>
+            <span>
+                과목번호/명
+                <input type="text" id="major_name_type" size="20">
+            </span>
+        </form>
+        </div>
+    </section>
+    <section>
+        <h4 class="header">[학부 교육과정]</h4>
+        <div>
+            <p>@테이블 생성</p>
+        </div>
+    </section>
+    
+    <p>DB에서 데이터를 가져오기</p>
+    <script>
+        document.getElementById('currentYear').value = new Date().toISOString().slice(0, 4);
+        
+    </script>
+</body>
+</html>

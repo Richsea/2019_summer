@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>전체성적조회</title>
+    <style type="text/css">
+        section
+        {
+            border: 1px solid black;
+            margin: 1px;
+        }
+        div { background-color: lightgray; }
+
+        .header { margin: 0px; }
+        .inlineBlock { display: inline-block; }
+
+        textarea
+        {
+            max-height: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <span>
+                조직분류
+                <select>
+                    <option value="every_option">- 전체 -</option>
+                </select>
+                학번/성명
+                <textarea id="student_number" readonly>201402377</textarea>
+                <textarea id="student_name" disabled>예부해</textarea>
+            </span>
+        </div>
+    </section>
+    <section>
+        <h4 class="header">[학생기초정보]</h4>
+        <div>
+            학번
+            <textarea id="student_number" readonly></textarea>
+            성명
+            <textarea id="student_name" readonly></textarea>
+            생년월일
+            <textarea id="student_birthday" readonly></textarea>
+            <br>
+
+            소속
+            <textarea id="student_major" readonly></textarea>
+            <br>
+
+            입학전형
+            <textarea id="admission_case"></textarea>
+            수강신청학년(학기)
+            <textarea id="student_grade"></textarea>
+        </div>
+    </section>
+    <section>
+        <h4 class="header inlineBlock">[취득성적]</h4>
+        년도/학기
+        <select>
+            <option value="total_grade">- 전체 -</option>
+        </select>
+
+        <div>
+            table 생성
+        </div>
+    </section>
+    <p>DB에서 데이터를 가져오기</p>
+
+</body>
+</html>
