@@ -1,0 +1,1 @@
+create database college_info;		// 데이터베이스 생성
